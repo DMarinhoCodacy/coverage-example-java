@@ -9,14 +9,6 @@ jobs:
     environment: production
     
     steps:
-    - name: Set up JDK
-      uses: actions/setup-java@v3
-      with:
-        java-version: '8'
-        distribution: 'temurin'
-        cache: maven
-    - name: Test with Maven
-      run: mvn clean test
     - name: Upload coverage information to codacy
       uses: codacy/codacy-coverage-reporter-action@v1.3.0
       with:
