@@ -6,7 +6,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    environment: dev
+    environment: production
     
     steps:
     - uses: actions/checkout@v4
@@ -15,11 +15,13 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
+        cache: maven
     - name: Test with Maven
       run: mvn clean test
 
     - name: Codacy Coverage Reporter
       shell: bash
       run: |
-        bash <(curl -Ls https://coverage.codacy.com/get.sh) report --codacy-api-base-url ${{ vars.API_BASE_URL }} -t ${{ secrets.CODACY_PROJECT_TOKEN }}
+        CODACY_PROJECT_TOKEN=${{ secrets.CODACY_PROJECT_TOKEN }} \
+        bash <(curl -Ls https://coverage.codacy.com/get.sh) report 
         
