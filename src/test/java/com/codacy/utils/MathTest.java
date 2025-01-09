@@ -8,6 +8,14 @@ public class MathTest {
     @Test
     public void shouldAddNumbers() {
         Math math = new Math(23);
+        
+
+        assertEquals(7, math.magicAdd(3, 4));
+        assertEquals(8, math.magicAdd(4, 4));
+    }
+    public void shouldAddNumbers2() {
+        Math math = new Math2(23);
+        
 
         assertEquals(7, math.magicAdd(3, 4));
         assertEquals(8, math.magicAdd(4, 4));
