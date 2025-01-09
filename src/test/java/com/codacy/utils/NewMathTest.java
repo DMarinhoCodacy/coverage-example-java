@@ -4,10 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MathTest {
+public class NewMathTest {
     @Test
     public void shouldAddNumbers() {
-        Math math = new Math(23);
+        NewMath math = new NewMath(23);
+        
 
         assertEquals(7, math.magicAdd(3, 4));
         assertEquals(8, math.magicAdd(4, 4));
