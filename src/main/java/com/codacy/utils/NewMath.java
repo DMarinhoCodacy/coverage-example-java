@@ -4,7 +4,7 @@ public class NewMath {
 
     private int magicNumber;
 
-    public Math(int magicNumber) {
+    public NewMath(int magicNumber) {
         this.magicNumber = magicNumber;
     }
 
