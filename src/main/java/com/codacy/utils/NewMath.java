@@ -1,6 +1,6 @@
 package com.codacy.utils;
 
-public class Math2 {
+public class NewMath {
 
     private int magicNumber;
 
