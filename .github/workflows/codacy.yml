@@ -1,6 +1,6 @@
 name: Run Tests and send coverage
 
-on: pull_request
+on: [push]
 
 jobs:
   build:
