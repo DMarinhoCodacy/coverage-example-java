@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class NewMathTest2 {
+public class NewMathTest {
     @Test
     public void shouldAddNumbers() {
         NewMath math = new NewMath(23);
